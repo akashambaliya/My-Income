@@ -1,0 +1,64 @@
+.container{
+    margin: auto;
+    /* width: 1200px; */
+    overflow: hidden;
+}
+.header{
+    background-color: #efeff0;
+    height: 75px;
+}
+.admin_bar{
+    /* width: 1200px; */
+    margin: auto;
+}
+.nav_bar{
+    height: 50px;
+    background-color: #369804;
+}
+.border_line{
+    border-color: #c3c3c3;  
+}
+.li{
+    margin: 0 15px;
+    padding: 13px;
+    color: #ffff;
+    padding-right: 40px;
+}
+
+.hover:hover{
+    filter: invert(1);
+}
+.filter{
+    filter: invert(1);
+}
+.sub_logo{
+    margin: 12px 100px;
+}
+.bg{
+    background-image: url("../image/bgimage.png");
+   
+}
+.headline{
+    width: 37%;
+    margin: auto;
+    line-height: 35px;
+    margin-top: 100px;
+}
+
+.h2{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+.nav_bar:after {
+    content: '';
+    position: absolute;
+    border-top: 10px solid #369804;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    top: 124px;
+    left: 490px;
+}
+
