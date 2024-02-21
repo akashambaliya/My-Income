@@ -53,7 +53,7 @@
     font-weight: bold;
 }
 
-video{
+.video_image{
     width: 802px;
     height: 452px;
     margin: auto;
@@ -118,6 +118,20 @@ footer{
     border-radius: 5px;
     color: white;
 }
+.tool_menu{
+    position: absolute;
+    top: 126px;
+    right: 29%;
+    background-color: #272727;
+    width: 350px;
+    height: 175px;
+    border-radius: 5px;
+    color: white;
+}
+.play-btn{
+    top: 0;
+    
+    
 }
 
 @media only screen and (max-width: 1535px){

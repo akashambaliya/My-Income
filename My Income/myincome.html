@@ -29,11 +29,11 @@
     <div class="container flex justify-between">
         <div class="sub_nav_bar1 ml-auto">
             <ul class="flex">
-                <li class="li border-r-2"><a class="hover flex items-center gap-x-2" href=""><img src="./image/home.png" alt="Image Not Found">Home</a></li>
-                <li class="li border-r-2"><a class="hover flex items-center gap-x-2" href=""><img src="./image/roll.png" alt="Image Not Found">Let’s Roll<span class="invert"><img src="./image/arrow.png" alt="Arrow Not Found"></span></a></li>
-                <li class="li"><a class="hover flex items-center gap-x-2" href=""><img src="./image/university.png" alt="">University</a></li>
+                <li class="li border-r-2"><a class="hover flex items-center gap-x-2" href="#"><img src="./image/home.png" alt="Image Not Found">Home</a></li>
+                <li class="li border-r-2"><a class="hover flex items-center gap-x-2" onclick="RollMenu()" href="#"><img src="./image/roll.png" alt="Image Not Found">Let’s Roll<span class="invert"><img src="./image/arrow.png" alt="Arrow Not Found"></span></a></li>
+                <li class="li"><a class="hover flex items-center gap-x-2" href="#"><img src="./image/university.png" alt="">University</a></li>
             </ul>
-            <div class="roll_menu" style="display: block;">
+            <div id="RollMenu" class="roll_menu" style="display: none;">
                 <ul class="py-3">
                     <li class="p-3"><a class="flex gap-2 items-center" href=""><img src="./image/revolution.png" alt="">My Income Revolution</a></li>
                     <li class="p-3"><a class="flex gap-2 items-center" href=""><img src="./image/academy.png" alt="">My Income Revolution Academy</a></li>
@@ -46,9 +46,16 @@
         </div>
         <div class="sub_nav_bar2 mr-auto">
             <ul class="flex">
-                <li class="li border-r-2"><a class="hover flex items-center gap-x-2" href=""><img src="./image/tool.png" alt="Image Not Found">Tools</a></li>
-                <li class="li border-r-2"><a class="hover flex items-center gap-x-2" href=""><img src="./image/charity.png" alt="Image Not Found">Charity<span class="invert"><img src="./image/arrow.png" alt="Arrow Not Found"></span></a></li>
-                <li class="li"><a class="hover flex items-center gap-x-2" href=""><img src="./image/resources.png" alt="">Resources</a></li>
+                <li class="li border-r-2"><a class="hover flex items-center gap-x-2" onclick="ToolMenu()" href="#"><img src="./image/tool.png" alt="Image Not Found">Tools<span class="invert"><img src="./image/arrow.png" alt="Arrow Not Found"></span></a></li>
+                <li class="li border-r-2"><a class="hover flex items-center gap-x-2" href="#"><img src="./image/charity.png" alt="Image Not Found">Charity</a></li>
+                <li class="li"><a class="hover flex items-center gap-x-2" href="#"><img src="./image/resources.png" alt="">Resources</a></li>
+            </ul>
+        </div>
+        <div id="ToolMenu" class="tool_menu" style="display: none;">
+            <ul class="py-3">
+                <li class="p-3"><a class="flex gap-2 items-center" href=""><img src="./image/tracker.png" alt="">Tracker [  Comming Soon ]</a></li>
+                <li class="p-3"><a class="flex gap-2 items-center" href=""><img src="./image/lead.png" alt="">Lead Generator</a></li>
+                <li class="p-3"><a class="flex gap-2 items-center" href=""><img src="./image/unlimited.png" alt="">Lead Generator Unlimited</a></li>
             </ul>
         </div>
     </div>       
@@ -57,9 +64,15 @@
     <div class="headline">
         <h2 class="h2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non varius massa. AI su ne. Aenean Vel pretium. Headline here.</h2>
     </div>
-    <video controls>
-        <source src="" type="video/mp4">
-    </video>
+    <div class="video_image relative">
+        <img src="./image/videoimage.png" alt="">
+        <a class="play-btn absolute grid place-content-center" href="#"><img src="./image/playbutton.png" alt=""></a>
+        <!-- <img src="./image/playbutton.png" alt=""> -->
+        <!-- <video controls>
+            <source src="" type="video/mp4">
+        </video> -->
+    </div>
+    
     <div class="flex my-100 tab">
         <a href="https://www.facebook.com/" target="_blank">
             <div class="tab1">
@@ -117,6 +130,32 @@
     </div>
 </footer>
 
+
+
+
+
+
+<script>
+    function RollMenu() {
+    var RollMenu = document.getElementById('RollMenu');
+
+    if (RollMenu.style.display === 'none') {
+      RollMenu.style.display = 'block';
+    } else {
+      RollMenu.style.display = 'none';
+    }
+  }
+
+  function ToolMenu(){
+    var ToolMenu = document.getElementById('ToolMenu');
+
+    if(ToolMenu.style.display === 'none'){
+        ToolMenu.style.display = 'block';
+    }else{
+        ToolMenu.style.display = 'none';
+    }
+  }
+</script>
 
 </body>
 </html>
