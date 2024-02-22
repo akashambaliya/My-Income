@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./css/myincome.css">
+    
     <title>Document</title>
 </head>
 <body class="bg">
@@ -16,7 +16,7 @@
                 <a href=""><img src="./image/logo.png" alt="logo not found"></a>
             </div>
             <div class="admin_menu grid place-content-center">
-                <ul class="flex p-6">
+                <ul class="flex p-6 admin_menu_ul">
                     <li class="border-r-2 pr-5 border_line"><a class="flex gap-x-2 items-center" href=""><img src="./image/account.png" alt="Image Not Found">My Account <span><img src="./image/arrow.png" alt="Image Not Found"></span></a></li>
                     <li class="border-r-2 mx-5 pr-5 border_line"><a class="flex gap-x-2 items-center" href=""><img src="./image/info.png" alt="Image Not Found">Information </a></li>
                     <li class="pr-5"><a class="flex gap-x-2 items-center" href=""><img src="./image/LogOut.png" alt="Image Not Found">Log Out</a></li>
@@ -30,55 +30,65 @@
         <div class="sub_nav_bar1 ml-auto">
             <ul class="flex">
                 <li class="li border-r-2"><a class="hover flex items-center gap-x-2" href="#"><img src="./image/home.png" alt="Image Not Found">Home</a></li>
-                <li class="li border-r-2"><a class="hover flex items-center gap-x-2" onclick="RollMenu()" href="#"><img src="./image/roll.png" alt="Image Not Found">Let’s Roll<span class="invert"><img src="./image/arrow.png" alt="Arrow Not Found"></span></a></li>
+                <li class="li border-r-2">
+                    <a class="hover flex items-center gap-x-2" onclick="RollMenu()" href="#"><img src="./image/roll.png" alt="Image Not Found">Let’s Roll<span class="invert"><img src="./image/arrow.png" alt="Arrow Not Found"></span></a>
+                    <div id="RollMenu" class="roll_menu" style="display: none;">
+                        <ul class="py-3">
+                            <li class="p-3"><a class="flex gap-2 items-center" href=""><img src="./image/revolution.png" alt="">My Income Revolution</a></li>
+                            <li class="p-3"><a class="flex gap-2 items-center" href=""><img src="./image/academy.png" alt="">My Income Revolution Academy</a></li>
+                            <li class="p-3"><a class="flex gap-2 items-center" href=""><img src="./image/partners.png" alt="">My Income Revolution Partners Program</a></li>
+                        </ul>
+                    </div>
+                </li>
                 <li class="li"><a class="hover flex items-center gap-x-2" href="#"><img src="./image/university.png" alt="">University</a></li>
             </ul>
-            <div id="RollMenu" class="roll_menu" style="display: none;">
-                <ul class="py-3">
-                    <li class="p-3"><a class="flex gap-2 items-center" href=""><img src="./image/revolution.png" alt="">My Income Revolution</a></li>
-                    <li class="p-3"><a class="flex gap-2 items-center" href=""><img src="./image/academy.png" alt="">My Income Revolution Academy</a></li>
-                    <li class="p-3"><a class="flex gap-2 items-center" href=""><img src="./image/partners.png" alt="">My Income Revolution Partners Program</a></li>
-                </ul>
-            </div>
         </div>
         <div class="sub_logo">
             <a href=""><img src="./image/sub-logo.png" alt=""></a>
         </div>
         <div class="sub_nav_bar2 mr-auto">
             <ul class="flex">
-                <li class="li border-r-2"><a class="hover flex items-center gap-x-2" onclick="ToolMenu()" href="#"><img src="./image/tool.png" alt="Image Not Found">Tools<span class="invert"><img src="./image/arrow.png" alt="Arrow Not Found"></span></a></li>
+                <li class="li border-r-2"><a class="hover flex items-center gap-x-2" onclick="ToolMenu()" href="#"><img src="./image/tool.png" alt="Image Not Found">Tools<span class="invert"><img src="./image/arrow.png" alt="Arrow Not Found"></span></a>
+                    <div id="ToolMenu" class="tool_menu" style="display: none;">
+                        <ul class="py-3">
+                            <li class="p-3"><a class="flex gap-2 items-center" href=""><img src="./image/tracker.png" alt="">Tracker [  Comming Soon ]</a></li>
+                            <li class="p-3"><a class="flex gap-2 items-center" href=""><img src="./image/lead.png" alt="">Lead Generator</a></li>
+                            <li class="p-3"><a class="flex gap-2 items-center" href=""><img src="./image/unlimited.png" alt="">Lead Generator Unlimited</a></li>
+                        </ul>
+                    </div>
+                </li>
                 <li class="li border-r-2"><a class="hover flex items-center gap-x-2" href="#"><img src="./image/charity.png" alt="Image Not Found">Charity</a></li>
                 <li class="li"><a class="hover flex items-center gap-x-2" href="#"><img src="./image/resources.png" alt="">Resources</a></li>
             </ul>
         </div>
-        <div id="ToolMenu" class="tool_menu" style="display: none;">
-            <ul class="py-3">
-                <li class="p-3"><a class="flex gap-2 items-center" href=""><img src="./image/tracker.png" alt="">Tracker [  Comming Soon ]</a></li>
-                <li class="p-3"><a class="flex gap-2 items-center" href=""><img src="./image/lead.png" alt="">Lead Generator</a></li>
-                <li class="p-3"><a class="flex gap-2 items-center" href=""><img src="./image/unlimited.png" alt="">Lead Generator Unlimited</a></li>
-            </ul>
-        </div>
+        
     </div>       
 </div>
 <div class="container">
     <div class="headline">
         <h2 class="h2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non varius massa. AI su ne. Aenean Vel pretium. Headline here.</h2>
     </div>
-    <div class="video_image relative">
-        <img src="./image/videoimage.png" alt="">
-        <a class="play-btn absolute" href="#"><img src="./image/playbutton.png" alt=""></a>
-        <video controls>
-            <source src="" type="video/mp4">
+    <div class="video_image relative" id="VideoImage" style="display: block;">
+        <img src="./image/vido.png" alt="">
+        <div class="play_btn absolute">
+            <a onclick="PlayVideo()">
+                <img src="./image/playbutton.png" alt="No Play Button">
+            </a>
+        </div>
+    </div>
+    <div class="video_play" id="VideoPlay" style="display: none;">
+        <video controls autoplay loop>
+            <source src="./image/SampleVideo_1280x720_5mb.mp4" type="video/mp4">
         </video>
     </div>
     
-    <div class="flex my-100 tab">
+    <div class="my-100 tab">
         <a href="https://www.facebook.com/" target="_blank">
             <div class="tab1">
                 <h2 class="h2 text-white">STEP 1</h2>
                 <div class="p-3 tab_details relative">
-                    <p class="tab_title">Join Us <b>on Facebook</b></p>
-                    <p class="text-sm/[25px]">All training information, news and updates will be posted  in the Facebook group.</p>
+                    <p class="tab_title text-center">Join Us <b>on Facebook</b></p>
+                    <p class="text-sm/[25px]">All training information, news and updates will be posted  in the Facebook <br> group.</p>
                     <img class="absolute right-0 bottom-0" src="./image/fb.png" alt="Image Not Found">
                 </div>
             </div>
@@ -86,8 +96,8 @@
         <div class="tab1">
             <h2 class="h2 text-white">STEP 2</h2>
             <div class="p-3 tab_details relative">
-                <p class="tab_title">Contact <b>Your Sponsor</b></p>
-                <p class="text-sm/[25px]">{ First Name } & { Last Name }</p>
+                <p class="tab_title text-center">Contact <b>Your Sponsor</b></p>
+                <p class="text-sm/[25px] text-center">{ First Name } & { Last Name }</p>
                 <p class="my-2">Through this channels:</p>
                 <div class="flex gap-x-2">
                     <a href=""><img class="w-8" src="./image/facebook_icon.png" alt="Icon Not Found"></a>
@@ -102,8 +112,8 @@
             <div class="tab1">
                 <h2 class="h2 text-white">STEP 3</h2>
                 <div class="p-3 tab_details relative">
-                    <p class="tab_title">Start <b>Your Training</b></p>
-                    <p class="text-sm/[25px]">Video training tutorials and  pdf documents for your  fast star through MIR system</p>
+                    <p class="tab_title text-center">Start <b>Your Training</b></p>
+                    <p class="text-sm/[25px]">Video training tutorials and  pdf documents for your  fast star <br>through MIR system</p>
                     <img class="absolute right-0 bottom-0" src="./image/media.png" alt="Image Not Found">
                 </div>
             </div>
@@ -132,7 +142,7 @@
 
 
 
-
+<link rel="stylesheet" href="./css/myincome.css">
 
 <script>
     function RollMenu() {
@@ -152,6 +162,16 @@
         ToolMenu.style.display = 'block';
     }else{
         ToolMenu.style.display = 'none';
+    }
+  }
+
+  function PlayVideo(){
+    var VideoImage = document.getElementById('VideoImage');
+    var VideoPlay = document.getElementById('VideoPlay');
+
+    if(VideoPlay.style.display === 'none'){
+        VideoImage.style.display = 'none';
+        VideoPlay.style.display = 'block';
     }
   }
 </script>
