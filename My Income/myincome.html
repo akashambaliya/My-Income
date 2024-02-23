@@ -22,7 +22,14 @@
                     <li class="pr-5"><a class="flex gap-x-2 items-center" href=""><img src="./image/LogOut.png" alt="Image Not Found">Log Out</a></li>
                 </ul>
             </div>
+            <div class="menu_icon">
+                <a href="">
+                    <img src="./image/menu_icon.png" alt="">
+                </a>
+            </div>
         </div>
+        
+        
     </div>
 </div>
 <div class="nav_bar border-b-1px">
@@ -120,6 +127,13 @@
         </a>
     </div>
 </div>
+<div id="AccountMenu" class="account_menu" style="display: block;">
+    <ul class="">
+        <li class="p-2"><a class="flex gap-x-2 items-center" href=""><img class="invert-[1]" src="./image/account.png" alt="Image Not Found">My Account <span><img class="invert-[1]" src="./image/arrow.png" alt="Image Not Found"></span></a></li>
+        <li class="p-2"><a class="flex gap-x-2 items-center" href=""><img class="invert-[1]" src="./image/info.png" alt="Image Not Found">Information </a></li>
+        <li class="p-2"><a class="flex gap-x-2 items-center" href=""><img class="invert-[1]" src="./image/LogOut.png" alt="Image Not Found">Log Out</a></li>
+    </ul>
+</div>
 <footer>
     <div class="container flex justify-between my-5 f_details">
         <div>
@@ -127,14 +141,14 @@
             <p class="footer_detail">Monday thru Friday 9am-5pm (EST) at: 1-234-567-8910</p>
         </div>
         <div class="">
-            <ul class="flex">
-                <li class="border-r px-5 f_border"><a href="#">Terms & Conditions</a></li>
-                <li class="border-r px-5 f_border"><a href="#">Refund Policy</a></li>
-                <li class="border-r px-5 f_border"><a href="#">Privacy</a></li>
-                <li class="border-r px-5 f_border"><a href="#">Earnings Disclosure</a></li>
-                <li class="border-r pl-5"><a href="#">Support Desk</a></li>
+            <ul class="footer footetr_menu">
+                <li class="border-r px-5 f_border"><a class="border" href="#">Terms & Conditions</a></li>
+                <li class="border-r px-5 f_border"><a class="border" href="#">Refund Policy</a></li>
+                <li class="border-r px-5 f_border"><a class="border" href="#">Privacy</a></li>
+                <li class="border-r px-5 f_border"><a class="border" href="#">Earnings Disclosure</a></li>
+                <li class="border-r px-5 f_border"><a class="border" href="#">Support Desk</a></li>
             </ul>
-            <p class="text-right">Copyright &#169 2013 INSISTO MEDIA,LLC</p>
+            <p class="text-right copyright mt-2">Copyright &#169 2013 INSISTO MEDIA,LLC</p>
         </div>
     </div>
 </footer>
@@ -164,6 +178,20 @@
         ToolMenu.style.display = 'none';
     }
   }
+
+  
+
+//   document.addEventListener("DOMContentLoaded", function() {
+//     var elementToHide = document.getElementById("RollMenu");
+
+//     // Function to hide the element
+//     function hideElement() {
+//         elementToHide.style.display = "none";
+//     }
+
+//     // Attach click event listener to document
+//     document.addEventListener("click", hideElement);
+// });
 
   function PlayVideo(){
     var VideoImage = document.getElementById('VideoImage');

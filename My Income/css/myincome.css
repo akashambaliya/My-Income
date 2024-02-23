@@ -72,7 +72,7 @@
     left: 100px;
 }
 .tool_menu:after{
-    left: 200px;
+    /* left: 200px; */
 }
 .tab{
     display: flex;
@@ -98,6 +98,11 @@
     box-shadow: -12px -8px 40px rgba(70,70,70,0.12) inset;
    
 }
+.menu_icon {
+    display: none;
+    width: 30px;
+    margin: auto 0;
+}
 .tab_title{
     color: #1d181d;
     font-size: 25px;
@@ -107,7 +112,10 @@ footer{
     padding: 10px;
     border-top:1px solid #c3c2c3 ;
 }
-
+.border:hover{
+    border-bottom: 1px solid #1d181d;
+    padding-bottom: 5px;
+}
 .footer_detail{
     color: #1d181d;
 }
@@ -115,29 +123,35 @@ footer{
     /* border-right: 1px; */
     border-color: #1d181d;
 }
-.roll_menu{
+.roll_menu,.account_menu{
     position: absolute;
+    /* left: 400px; */
     top: 126px;
     background-color: #272727;
     width: 350px;
     height: 175px;
     border-radius: 5px;
     color: white;
+}
+.account_menu{
+    width: 175px;
+    height: 130px
 }
 .tool_menu{
     position: absolute;
     top: 126px;
-    right: 29%;
+    right: 555px;
     background-color: #272727;
     width: 350px;
     height: 175px;
     border-radius: 5px;
     color: white;
 }
+.footer{
+    display: flex;
+}
 .play-btn{
     top: 0;
-    
-    
 }
 
 @media only screen and (max-width: 1535px){
@@ -150,16 +164,26 @@ footer{
     }
 }
 
-@media only screen and (max-width: 1279px){
+@media only screen and (min-width: 1024px) and (max-width: 1279px){
 
     .li{
         margin: 0px 5px;
         padding: 13px 0px;
         padding-right: 17px;
     }
+    .headline{
+        width: 58%;
+    }
     .tab{
         padding: 0px 25px;
         gap: 1cm;
+    }
+    .f_details{
+        font-size: small;
+    }
+    .border-r{
+        border-color: #1d181d;
+        padding: 0 0.35rem;
     }
 }
 
@@ -202,7 +226,10 @@ footer{
         width: 245px;
     }
     .tool_menu:after{
-        left: 92    px;
+        /* left: 92px; */
+    }
+    .f_border{
+        padding: 0 0.25rem;
     }
     .f_details{
         font-size: x-small;
@@ -210,20 +237,56 @@ footer{
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+   
     .header{
         height: 60px;
     }
-    admin_menu{
+    .admin_menu{
         font-size: smaller;
     }
     .admin_menu_ul{
         padding: 16px 0px;
     }
     .headline{
-        width: 100%;
+        width: 80%;
+        margin: 60px auto;
+    }
+    .h2{
+        font-size: 25px;
     }
     .logo{
         width: 160px;
+        padding-right: 15px;
+    }
+    
+    .li{
+        padding: 11px 0px;
+        padding-right: 17px;
+    }
+    .nav_bar{
+        height: 45px;
+    }
+    .sub_nav_bar1,.sub_nav_bar2{
+        font-size: small;
+    }
+    .account_menu{
+        top: 106px;
+        width: 295px;
+    }
+    .roll_menu{
+        top: 106px;
+        width: 295px;
+    }
+    .roll_menu:after{
+        /* left: 88px; */
+    }
+    .tool_menu{
+        top: 106px;
+        right: 180px;
+        width: 241px;
+    }
+    .tool_menu:after {
+        /* left: 140px; */
     }
     .tab{
         display: block;
@@ -231,9 +294,83 @@ footer{
         padding: 0 40px
     }
     .tab1{
-        margin-bottom: 35px;  
+        margin-bottom: 35px;
+        height: auto;  
+    }
+    
+    .video_image,.video_play{
+        width: 700px;
+        height: auto;
+    }
+    .f_border{
+        padding: 0 0.25rem;
     }
     .f_details{
         font-size: x-small;
     }
+    .sub_logo {
+        margin: auto;   
+        margin-top: 15px;
+        width: 45px;
+    }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 767px){
+    .headline {
+        width: 90%;
+        margin: 30px auto;
+    }
+    .h2{
+        font-size: 4vw;
+        line-height: normal;
+    }
+    .menu_icon {
+        display: block;
+        margin-right: 10px;
+    }
+    .admin_menu{
+        display: none;
+    }
+    .tab{
+        display: block;
+        margin: 35px auto;
+        padding: 0;
+    }
+    .tab1{
+        height: auto;
+        margin: auto;
+        margin-top: 35px;
+    }
+    .footer{
+        display: block;
+    }
+    .f_details{
+        display: block;
+    }
+    .footer_menu{
+        display: block;
+    }
+    .border-r{
+        margin-top: 10px;
+        border: none;
+    }
+    .copyright{
+        text-align: start;
+    }
+    .border:hover{
+        border-bottom: 1px solid #1d181d;
+        padding-bottom: 5px;
+    }
+    .video_image,.video_play{
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+    .play_btn {
+        top: 29%;
+        right: 40%;
+        width: 85px;
+        cursor: pointer;
+    }
+    
 }
