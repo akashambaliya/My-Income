@@ -1,3 +1,6 @@
+*{
+    font-family: roboto;
+}
 .container{
     margin: auto;
     /* width: 1200px; */
@@ -18,7 +21,9 @@
 .border_line{
     border-color: #c3c3c3;  
 }
-
+video{
+    width: 100%;
+}
 .li{
     margin: 0 15px;
     padding: 13px;
@@ -137,10 +142,14 @@ footer{
     width: 175px;
     height: 130px
 }
+li.border-r.px-5.f_border:last-child{
+    border: none;
+    padding-right: 0;
+}
 .tool_menu{
     position: absolute;
     top: 126px;
-    right: 555px;
+    /* right: 555px; */
     background-color: #272727;
     width: 350px;
     height: 175px;
@@ -161,6 +170,9 @@ footer{
     }
     .tab{
         padding: 0px 77px;
+    }
+    .account_menu{
+        display: none;
     }
 }
 
@@ -184,6 +196,9 @@ footer{
     .border-r{
         border-color: #1d181d;
         padding: 0 0.35rem;
+    }
+    .account_menu{
+        display: none;
     }
 }
 
@@ -233,6 +248,9 @@ footer{
     }
     .f_details{
         font-size: x-small;
+    }
+    .account_menu{
+        display: none;
     }
 }
 
@@ -313,6 +331,9 @@ footer{
         margin-top: 15px;
         width: 45px;
     }
+    .account_menu{
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 280px) and (max-width: 767px){
@@ -331,6 +352,27 @@ footer{
     .admin_menu{
         display: none;
     }
+    .sub_logo{
+        display: none;
+    }
+    .display{
+        display: block;
+    }
+    .li{
+        margin: 0;
+        padding: 4px;
+        padding-right:0;
+        border: none;
+    }
+    .ml-auto{
+        margin-left: 15px;
+    }
+    .mr-auto{
+        margin-right: 15px;
+    }
+    .nav_bar {
+        height: 100px;
+    }
     .tab{
         display: block;
         margin: 35px auto;
@@ -346,6 +388,7 @@ footer{
     }
     .f_details{
         display: block;
+        text-align: center;
     }
     .footer_menu{
         display: block;
@@ -353,9 +396,11 @@ footer{
     .border-r{
         margin-top: 10px;
         border: none;
+        padding: 0;
     }
     .copyright{
-        text-align: start;
+        text-align: center;
+        font-size: x-small;
     }
     .border:hover{
         border-bottom: 1px solid #1d181d;
@@ -372,5 +417,32 @@ footer{
         width: 85px;
         cursor: pointer;
     }
-    
+    .account_menu{
+        width: 175px;
+        height: 130px;
+        top: 70px;
+        right: 15px;
+        z-index: 1;
+    }
+    .roll_menu,.tool_menu{
+        top: 130px;
+        font-size: smaller;
+        width: 200px;
+        height: 137px;
+    }
+    .tool_menu{
+        top: 105px;
+        right: 15px;
+        height: 115px;
+    }
+    .tool_menu:after{
+        left: 170px;
+    }
+    .roll_pad{
+        padding: 0;
+    }
+    .roll_pad1{
+        padding: 5px;
+    }
+
 }

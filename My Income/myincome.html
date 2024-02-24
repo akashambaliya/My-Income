@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body class="bg">
@@ -22,10 +24,17 @@
                     <li class="pr-5"><a class="flex gap-x-2 items-center" href=""><img src="./image/LogOut.png" alt="Image Not Found">Log Out</a></li>
                 </ul>
             </div>
-            <div class="menu_icon">
-                <a href="">
+            <div class="menu_icon" onclick="AccountMenu()">
+                <a href="#">
                     <img src="./image/menu_icon.png" alt="">
                 </a>
+            </div>
+            <div id="AccountMenu" class="account_menu" style="display: none;">
+                <ul class="">
+                    <li class="p-2"><a class="flex gap-x-2 items-center" href=""><img class="invert-[1]" src="./image/account.png" alt="Image Not Found">My Account <span><img class="invert-[1]" src="./image/arrow.png" alt="Image Not Found"></span></a></li>
+                    <li class="p-2"><a class="flex gap-x-2 items-center" href=""><img class="invert-[1]" src="./image/info.png" alt="Image Not Found">Information </a></li>
+                    <li class="p-2"><a class="flex gap-x-2 items-center" href=""><img class="invert-[1]" src="./image/LogOut.png" alt="Image Not Found">Log Out</a></li>
+                </ul>
             </div>
         </div>
         
@@ -35,15 +44,15 @@
 <div class="nav_bar border-b-1px">
     <div class="container flex justify-between">
         <div class="sub_nav_bar1 ml-auto">
-            <ul class="flex">
+            <ul class="flex display">
                 <li class="li border-r-2"><a class="hover flex items-center gap-x-2" href="#"><img src="./image/home.png" alt="Image Not Found">Home</a></li>
                 <li class="li border-r-2">
                     <a class="hover flex items-center gap-x-2" onclick="RollMenu()" href="#"><img src="./image/roll.png" alt="Image Not Found">Let’s Roll<span class="invert"><img src="./image/arrow.png" alt="Arrow Not Found"></span></a>
                     <div id="RollMenu" class="roll_menu" style="display: none;">
-                        <ul class="py-3">
-                            <li class="p-3"><a class="flex gap-2 items-center" href=""><img src="./image/revolution.png" alt="">My Income Revolution</a></li>
-                            <li class="p-3"><a class="flex gap-2 items-center" href=""><img src="./image/academy.png" alt="">My Income Revolution Academy</a></li>
-                            <li class="p-3"><a class="flex gap-2 items-center" href=""><img src="./image/partners.png" alt="">My Income Revolution Partners Program</a></li>
+                        <ul class="py-3 roll_pad">
+                            <li class="p-3 roll_pad1"><a class="flex gap-2 items-center" href=""><img src="./image/revolution.png" alt="">My Income Revolution</a></li>
+                            <li class="p-3 roll_pad1"><a class="flex gap-2 items-center" href=""><img src="./image/academy.png" alt="">My Income Revolution Academy</a></li>
+                            <li class="p-3 roll_pad1"><a class="flex gap-2 items-center" href=""><img src="./image/partners.png" alt="">My Income Revolution Partners Program</a></li>
                         </ul>
                     </div>
                 </li>
@@ -54,13 +63,13 @@
             <a href=""><img src="./image/sub-logo.png" alt=""></a>
         </div>
         <div class="sub_nav_bar2 mr-auto">
-            <ul class="flex">
+            <ul class="flex display">
                 <li class="li border-r-2"><a class="hover flex items-center gap-x-2" onclick="ToolMenu()" href="#"><img src="./image/tool.png" alt="Image Not Found">Tools<span class="invert"><img src="./image/arrow.png" alt="Arrow Not Found"></span></a>
                     <div id="ToolMenu" class="tool_menu" style="display: none;">
-                        <ul class="py-3">
-                            <li class="p-3"><a class="flex gap-2 items-center" href=""><img src="./image/tracker.png" alt="">Tracker [  Comming Soon ]</a></li>
-                            <li class="p-3"><a class="flex gap-2 items-center" href=""><img src="./image/lead.png" alt="">Lead Generator</a></li>
-                            <li class="p-3"><a class="flex gap-2 items-center" href=""><img src="./image/unlimited.png" alt="">Lead Generator Unlimited</a></li>
+                        <ul class="py-3 roll_pad">
+                            <li class="p-3 roll_pad1"><a class="flex gap-2 items-center" href=""><img src="./image/tracker.png" alt="">Tracker [  Comming Soon ]</a></li>
+                            <li class="p-3 roll_pad1"><a class="flex gap-2 items-center" href=""><img src="./image/lead.png" alt="">Lead Generator</a></li>
+                            <li class="p-3 roll_pad1"><a class="flex gap-2 items-center" href=""><img src="./image/unlimited.png" alt="">Lead Generator Unlimited</a></li>
                         </ul>
                     </div>
                 </li>
@@ -84,9 +93,7 @@
         </div>
     </div>
     <div class="video_play" id="VideoPlay" style="display: none;">
-        <video controls autoplay loop>
-            <source src="./image/SampleVideo_1280x720_5mb.mp4" type="video/mp4">
-        </video>
+        <video src="https://media.giphy.com/media/klIaoXlnH9TMY/giphy.mp4" muted autoplay loop playsinline></video>
     </div>
     
     <div class="my-100 tab">
@@ -127,13 +134,7 @@
         </a>
     </div>
 </div>
-<div id="AccountMenu" class="account_menu" style="display: block;">
-    <ul class="">
-        <li class="p-2"><a class="flex gap-x-2 items-center" href=""><img class="invert-[1]" src="./image/account.png" alt="Image Not Found">My Account <span><img class="invert-[1]" src="./image/arrow.png" alt="Image Not Found"></span></a></li>
-        <li class="p-2"><a class="flex gap-x-2 items-center" href=""><img class="invert-[1]" src="./image/info.png" alt="Image Not Found">Information </a></li>
-        <li class="p-2"><a class="flex gap-x-2 items-center" href=""><img class="invert-[1]" src="./image/LogOut.png" alt="Image Not Found">Log Out</a></li>
-    </ul>
-</div>
+
 <footer>
     <div class="container flex justify-between my-5 f_details">
         <div>
@@ -179,6 +180,15 @@
     }
   }
 
+  function AccountMenu(){
+    var AccountMenu = document.getElementById('AccountMenu');
+
+    if(AccountMenu.style.display === 'none'){
+        AccountMenu.style.display = 'block';
+    }else{
+        AccountMenu.style.display = 'none';
+    }
+  }
   
 
 //   document.addEventListener("DOMContentLoaded", function() {
